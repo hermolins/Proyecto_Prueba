@@ -1,0 +1,85 @@
+/* General */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #1e1e1e;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 350px;
+    text-align: center;
+}
+
+/* Formularios */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+button {
+    width: 95%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2979ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5393ff;
+}
+
+/* Mensajes */
+p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+}
+
+td {
+    background-color: #1e1e1e;
+}
+
+/* Enlaces */
+a {
+    color: #2979ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

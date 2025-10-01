@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Usuarios Registrados</h1>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Contraseña</th>
+        </tr>
+        {% for u in usuarios %}
+        <tr>
+            <td>{{ u.nombre }}</td>
+            <td>{{ u.email }}</td>
+            <td>{{ u.contraseña }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/registro">Volver al Registro</a>
+</div>
+</body>
+</html>

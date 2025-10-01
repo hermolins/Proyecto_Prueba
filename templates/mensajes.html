@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensajes Guardados</title>
+</head>
+<body>
+    <h1>📬 Mensajes Guardados (Árbol Binario)</h1>
+    
+    {% if mensajes %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Remitente</th>
+                    <th>Destinatario</th>
+                    <th>Asunto</th>
+                    <th>Cuerpo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for msg in mensajes %}
+                    <tr>
+                        <td>{{ msg.id }}</td>
+                        <td>{{ msg.remitente }}</td>
+                        <td>{{ msg.destinatario }}</td>
+                        <td>{{ msg.asunto }}</td>
+                        <td>{{ msg.cuerpo }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay mensajes guardados.</p>
+    {% endif %}
+
+    <hr>
+    <p><a href="{{ url_for('componer_correo') }}">Componer Nuevo Correo</a></p>
+</body>
+</html>

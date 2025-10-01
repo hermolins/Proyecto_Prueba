@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Componer Correo</title>
+    <link rel="stylesheet" href="/static/styles.css"> 
+</head>
+<body>
+<div class="container"> <h1>✉️ Componer Correo</h1>
+    <p>Enviando como: <strong>{{ remitente_email }}</strong></p> 
+    
+    {% if mensaje %}
+        <p style="color: #2979ff;">{{ mensaje }}</p> 
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('componer_correo') }}">
+        <label for="destinatario">Para:</label><br>
+        <input type="email" id="destinatario" name="destinatario" placeholder="Email del Destinatario" required><br>
+        
+        <label for="asunto">Asunto:</label><br>
+        <input type="text" id="asunto" name="asunto" placeholder="Asunto del Mensaje" required><br>
+        
+        <label for="cuerpo">Mensaje:</label><br>
+        <textarea id="cuerpo" name="cuerpo" rows="10" cols="38" required></textarea><br> 
+        
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+    
+    <p><a href="{{ url_for('ver_mensajes') }}">Ver Mensajes Guardados (Árbol)</a></p>
+    <p><a href="{{ url_for('logout') }}">Cerrar Sesión</a></p>
+</div>
+</body>
+</html>

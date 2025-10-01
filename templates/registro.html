@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Registro</h1>
+    <form method="POST">
+        <input type="text" name="nombre" placeholder="Nombre y Apellido" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="contraseña" placeholder="Contraseña" required><br>
+        <button type="submit">Registrarse</button>
+    </form>
+    <p>{{ mensaje }}</p>
+    <a href="/login">Ir al Login</a>
+</div>
+</body>
+</html>
